@@ -24,29 +24,20 @@ const AllCategoriesCard = () => {
           modules={[Scrollbar]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <SingleCard />
-            <SingleCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SingleCard />
-            <SingleCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SingleCard />
-            <SingleCard />
-          </SwiperSlide>
+          {[...Array(4)].map((x, i) => (
+            <SwiperSlide key={i}>
+              <SingleCard />
+              <SingleCard />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <div className="hidden lg:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
-        <SingleCard />
+        {[...Array(8)].map((x, i) => (
+          <SwiperSlide key={i}>
+            <SingleCard />
+          </SwiperSlide>
+        ))}
       </div>
     </>
   );
