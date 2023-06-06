@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       {/* top carosel end */}
 
-      {/* shop by category starts */}
+      {/* shop by category start */}
       <div>
         <h1 className="card-title">SHOP BY CATEGORY</h1>
         <AllCategoriesCard />
